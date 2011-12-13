@@ -1,5 +1,5 @@
 Name       : iw
-Version    : 0.9.21
+Version    : 0.9.22
 Release    : 1
 Group      : System/Networking
 Summary    : A nl80211 based wireless configuration tool
@@ -18,5 +18,5 @@ License    : ISC
 Files      :
     - "%doc COPYING"
     - "%doc README"
-    - /usr/sbin/iw
-    - /usr/share/man/man8/iw.8.gz
+    - "%{_sbindir}/iw"
+    - "%{_mandir}/man8/iw.8.gz"
