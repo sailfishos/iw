@@ -1,5 +1,5 @@
 Name       : iw
-Version    : 0.9.22
+Version    : 3.4
 Release    : 1
 Group      : System/Networking
 Summary    : A nl80211 based wireless configuration tool
@@ -12,7 +12,7 @@ URL        : http://wireless.kernel.org/en/users/Documentation/iw
 Sources    : 
     - http://wireless.kernel.org/download/iw/iw-%{version}.tar.bz2
 PkgConfigBR:
-    - libnl-1
+    - libnl-3.0
 Configure  : none
 License    : ISC
 Files      :

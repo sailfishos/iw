@@ -1,3 +1,7 @@
+* Fri May 25 2012 Marko Saukko <sage@merproject.org> - 3.4
+- Update to version 3.4
+- Build dep on libnl-3.0 instead of libnl-1.
+
 * Tue Dec 13 2011 Marko Saukko <marko.saukko@cybercom.com> - 0.9.22
 - Update to version 0.9.22.
 
