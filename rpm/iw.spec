@@ -1,12 +1,14 @@
 Name:       iw
 Summary:    A nl80211 based wireless configuration tool
 Version:    4.1
-Release:    1
+Release:    2
 Group:      System/Networking
 License:    ISC
 URL:        http://wireless.kernel.org/en/users/Documentation/iw
 Source0:    http://wireless.kernel.org/download/iw/iw-%{version}.tar.bz2
 BuildRequires:  pkgconfig(libnl-3.0)
+Provides:  wireless-tools > 29
+Obsoletes:  wireless-tools <= 29
 
 %description
 iw is a new nl80211 based CLI configuration utility for wireless devices.
