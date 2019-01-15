@@ -16,24 +16,33 @@ Currently you can only use this utility to configure devices which use a
 mac80211 driver as these are the new drivers being written - only because most
 new wireless devices being sold are now SoftMAC.
 
+%package doc
+Summary:   Documentation for %{name}
+Group:     Documentation
+Requires:  %{name} = %{version}-%{release}
 
+%description doc
+Man page for %{name}.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}/iw
 
 %build
-cd %{name}
-make %{?jobs:-j%jobs}
+make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
-cd %{name}
 %make_install
 
+mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
+install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} README
 
 %files
 %defattr(-,root,root,-)
-%doc %{name}/COPYING
-%doc %{name}/README
+%license COPYING
 %{_sbindir}/iw
-%{_mandir}/man8/iw.8.gz
+
+%files doc
+%defattr(-,root,root,-)
+%{_mandir}/man8/%{name}.*
+%{_docdir}/%{name}-%{version}
