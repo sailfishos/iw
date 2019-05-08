@@ -1,6 +1,6 @@
 Name:       iw
 Summary:    A nl80211 based wireless configuration tool
-Version:    4.1
+Version:    5.0.1
 Release:    2
 Group:      System/Networking
 License:    ISC
