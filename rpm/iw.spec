@@ -4,8 +4,8 @@ Version:    5.0.1
 Release:    2
 Group:      System/Networking
 License:    ISC
-URL:        http://wireless.kernel.org/en/users/Documentation/iw
-Source0:    http://wireless.kernel.org/download/iw/iw-%{version}.tar.bz2
+URL:        https://github.com/sailfishos/iw
+Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(libnl-3.0)
 Provides:  wireless-tools > 29
 Obsoletes:  wireless-tools <= 29
