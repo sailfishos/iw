@@ -2,7 +2,6 @@ Name:       iw
 Summary:    A nl80211 based wireless configuration tool
 Version:    5.0.1
 Release:    2
-Group:      System/Networking
 License:    ISC
 URL:        https://github.com/sailfishos/iw
 Source0:    %{name}-%{version}.tar.bz2
@@ -18,7 +17,6 @@ new wireless devices being sold are now SoftMAC.
 
 %package doc
 Summary:   Documentation for %{name}
-Group:     Documentation
 Requires:  %{name} = %{version}-%{release}
 
 %description doc
