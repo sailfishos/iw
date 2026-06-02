@@ -1,7 +1,7 @@
 Name:       iw
 Summary:    A nl80211 based wireless configuration tool
-Version:    5.0.1
-Release:    2
+Version:    6.17
+Release:    1
 License:    ISC
 URL:        https://github.com/sailfishos/iw
 Source0:    %{name}-%{version}.tar.bz2
@@ -26,21 +26,18 @@ Man page for %{name}.
 %setup -q -n %{name}-%{version}/iw
 
 %build
-make %{?_smp_mflags}
+%make_build
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
 install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} README
 
 %files
-%defattr(-,root,root,-)
 %license COPYING
 %{_sbindir}/iw
 
 %files doc
-%defattr(-,root,root,-)
 %{_mandir}/man8/%{name}.*
 %{_docdir}/%{name}-%{version}
